@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>万圣节抽符</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript">
+			/*function showpage2(){
+				//隐藏page1
+				document.getElementById("page1").style.display="none";
+				//显示page2
+				document.getElementById("page2").style.display="block";
+			}
+			function showpage3(){
+				document.getElementById("page2").style.display="none";
+				document.getElementById("page3").style.display="block";
+			}
+			function showpage4(){
+				document.getElementById("page3").style.display="none";
+				document.getElementById("page4").style.display="block";
+			}
+			function showpage5(){
+				document.getElementById("page4").style.display="none";
+				document.getElementById("page3").style.display="block";
+			}*/
+			function showpage(num){
+				//隐藏所有page
+				document.getElementById("page1").style.display="none";
+				document.getElementById("page2").style.display="none";
+				document.getElementById("page3").style.display="none";
+				document.getElementById("page4").style.display="none";
+				//根据num的值显示某个page
+				if(num==2)
+				{
+					document.getElementById("page2").style.display="block";
+				}
+				else if(num==3)
+				{
+					document.getElementById("page3").style.display="block";
+				}
+				else if(num==4)
+				{
+					document.getElementById("page4").style.display="block";
+				}
+				
+			}
+			function showcharm(num){
+				document.getElementById("page3").style.display="none";
+				document.getElementById("page4").style.display="block";
+				if(num==1)
+				{
+					document.getElementById("page4").style.backgroundImage="url(img/charm1.jpg)";
+				}
+				else if(num==2)
+				{
+					document.getElementById("page4").style.backgroundImage="url(img/charm2.jpg)";
+				}
+				else if(num==3)
+				{
+					document.getElementById("page4").style.backgroundImage="url(img/charm3.jpg)";
+				}
+				else if(num==4)
+				{
+					document.getElementById("page4").style.backgroundImage="url(img/charm4.jpg)";
+				}
+				else if(num==5)
+				{
+					document.getElementById("page4").style.backgroundImage="url(img/charm5.jpg)";
+				}
+				else if(num==6)
+				{
+					document.getElementById("page4").style.backgroundImage="url(img/charm6.jpg)";
+				}
+				else if(num==7)
+				{
+					document.getElementById("page4").style.backgroundImage="url(img/charm7.jpg)";
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<!--hello world!<br />
+		hello china!<br />
+		<img src="img/box.png" />
+		<img src="img/title.png"  />-->
+		<audio src="audio/AKB48.mp3" autoplay="autoplay" loop="true"></audio>
+		<div id="page1">
+			<img id="title" src="img/title.png"  />
+			<img id="box" src="img/box.png" onclick="showpage(2)"/>
+		</div>
+		<div id="page2">
+			<img id="pumpkin" src="img/pumpkin.png" />
+			<img id="startGame" src="img/startGame.jpg" onclick="showpage(3)" />
+		</div>
+		<div id="page3">
+			<!--<a href="img/charm1.jpg">
+				<img id="charm1" src="img/1.png" onclick="showpage(4)"/>
+			</a>
+			<a href="img/charm2.jpg">
+				<img id="charm2" src="img/2.png" onclick="showpage(4)"/>
+			</a>
+			
+			<a href="img/charm3.jpg">
+				<img id="charm3" src="img/3.png" onclick="showpage(4)"/>
+			</a>
+			
+			<a href="img/charm4.jpg">
+				<img id="charm4" src="img/4.png" onclick="showpage(4)"/>
+			</a>
+			
+			<a href="img/charm5.jpg">
+				<img id="charm5" src="img/5.png" onclick="showpage(4)"/>
+			</a>
+			
+			<a href="img/charm6.jpg">
+				<img id="charm6" src="img/6.png" onclick="showpage(4)"/>
+			</a>
+			
+			<a href="img/charm7.jpg">
+			    <img id="charm7" src="img/7.png" onclick="showpage(4)"/>
+			</a>-->
+			<img id="charm1" src="img/1.png" onclick="showcharm(7)"/>
+			<img id="charm2" src="img/2.png" onclick="showcharm(6)"/>
+			<img id="charm3" src="img/3.png" onclick="showcharm(5)"/>
+			<img id="charm4" src="img/4.png" onclick="showcharm(4)"/>
+			<img id="charm5" src="img/5.png" onclick="showcharm(3)"/>
+			<img id="charm6" src="img/6.png" onclick="showcharm(2)"/>
+			<img id="charm7" src="img/7.png" onclick="showcharm(1)"/>
+			
+			
+			
+		</div>
+		<div id="page4">
+			<img id="back" src="img/back.png" onclick="showpage(3)"/>
+			
+		</div>
+	</body>
+</html>
